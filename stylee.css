@@ -1,0 +1,1029 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #07533e;
+    --green-dark: #043d2f;
+    --green-light: #e9f2ee;
+    --yellow: #f3b927;
+    --text: #26332e;
+    --muted: #74807b;
+    --white: #fff;
+    --border: #e5e9e6;
+    --shadow: 0 12px 35px rgba(9, 57, 43, .08);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    color: var(--text);
+    line-height: 1.8;
+    background: #fff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1120px, calc(100% - 40px));
+    margin-inline: auto;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,.96);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.nav {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--green);
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo-mark {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    background: var(--green);
+    color: white;
+    font-size: 22px;
+}
+
+.logo strong,
+.logo small {
+    display: block;
+}
+
+.logo strong {
+    font-size: 15px;
+}
+
+.logo small {
+    font-size: 10px;
+    color: var(--muted);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 13px;
+    color: #47534e;
+}
+
+.menu a:hover {
+    color: var(--green);
+}
+
+.nav-donate {
+    background: var(--yellow);
+    color: #292315 !important;
+    padding: 9px 17px;
+    border-radius: 9px;
+    font-weight: 700;
+}
+
+.menu-btn {
+    display: none;
+    border: 0;
+    background: var(--green);
+    color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.donation-page {
+    direction: rtl;
+    background: #f5f8f6;
+    color: #193b31;
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.donation-header {
+    max-width: 760px;
+    margin: auto;
+    padding: 95px 20px 55px;
+    text-align: center;
+}
+
+.eyebrow {
+    display: inline-block;
+
+    padding: 8px 17px;
+
+    background: #e4f1eb;
+    color: #267155;
+
+    border-radius: 50px;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.donation-header h1 {
+    margin: 20px 0 12px;
+
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.35;
+
+    font-weight: 900;
+    letter-spacing: -1.5px;
+}
+
+.donation-header h1 span {
+    color: #c49a22;
+}
+
+.donation-header p {
+    margin: 0;
+
+    color: #7b8982;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.donation-cards {
+    width: min(1080px, calc(100% - 30px));
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+.donation-box {
+    position: relative;
+
+    min-height: 390px;
+
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e0e9e4;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow:
+        0 8px 30px rgba(28, 73, 58, .045);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+
+/* decorative corner */
+
+.donation-box::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    left: -80px;
+    bottom: -90px;
+
+    border-radius: 50%;
+
+    background: #eef6f1;
+
+    transition: .4s ease;
+}
+
+.donation-box:hover {
+    transform: translateY(-7px);
+
+    border-color: #cbded5;
+
+    box-shadow:
+        0 20px 50px rgba(27, 70, 55, .11);
+}
+
+.donation-box:hover::after {
+    transform: scale(1.4);
+}
+
+
+/* =====================================================
+   CARD HEADER
+===================================================== */
+
+.box-header {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.box-number {
+    color: #b4c1ba;
+
+    font-family: monospace;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.box-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    transition: .35s ease;
+}
+
+.box-icon svg {
+    width: 38px;
+    height: 38px;
+}
+
+.donation-box:hover .box-icon {
+    transform: scale(1.06) rotate(-3deg);
+}
+
+
+/* COLORS */
+
+.box-icon.green {
+    background: #e6f3ec;
+    color: #28765a;
+}
+
+.box-icon.gold {
+    background: #fff5da;
+    color: #b68c20;
+}
+
+.box-icon.blue {
+    background: #e9f2f7;
+    color: #3f718c;
+}
+
+.box-icon.orange {
+    background: #fff0e7;
+    color: #b86d47;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.box-title {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 22px;
+}
+
+.box-title h2 {
+    margin: 0 0 8px;
+
+    color: #183a30;
+
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.box-title p {
+    max-width: 400px;
+
+    margin: 0;
+
+    color: #7a8881;
+
+    font-size: 11px;
+
+    line-height: 2;
+}
+
+
+/* =====================================================
+   INFORMATION AREA
+===================================================== */
+
+.information-area {
+    position: relative;
+    z-index: 3;
+
+    margin-top: 20px;
+
+    padding: 5px 15px;
+
+    background: #f7faf8;
+
+    border: 1px solid #e8efeb;
+
+    border-radius: 10px;
+}
+
+
+.info-row {
+    min-height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border-bottom: 1px dashed #dfe8e3;
+}
+
+.info-row:last-child {
+    border-bottom: 0;
+}
+
+.info-row span {
+    color: #829089;
+
+    font-size: 9px;
+}
+
+.info-row strong {
+    color: #304c42;
+
+    font-size: 10px;
+
+    text-align: left;
+}
+
+
+/* =====================================================
+   QR AREA
+===================================================== */
+
+.qr-area {
+    position: relative;
+    z-index: 3;
+
+    margin-top: 20px;
+
+    padding: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    background: #f7faf8;
+
+    border: 1px solid #e5ede8;
+
+    border-radius: 10px;
+}
+
+.qr-placeholder {
+    width: 95px;
+    height: 95px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #183d31 0,
+            #183d31 3px,
+            #ffffff 3px,
+            #ffffff 7px
+        );
+
+    border: 7px solid #fff;
+
+    box-shadow:
+        0 4px 15px rgba(0,0,0,.08);
+}
+
+.qr-placeholder span {
+    padding: 3px 6px;
+
+    background: #fff;
+
+    color: #183d31;
+
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.qr-placeholder small {
+    margin-top: 3px;
+
+    background: #fff;
+
+    color: #555;
+
+    font-size: 7px;
+}
+
+.qr-text {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.qr-text strong {
+    color: #284d40;
+
+    font-size: 12px;
+}
+
+.qr-text span {
+    color: #84918b;
+
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   CARD FOOTER
+===================================================== */
+
+.box-footer {
+    position: relative;
+    z-index: 4;
+
+    margin-top: auto;
+    padding-top: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    color: #287359;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.arrow {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e9f4ef;
+
+    transition: .25s ease;
+}
+
+.donation-box:hover .arrow {
+    background: #287359;
+
+    color: #fff;
+
+    transform: translateX(-4px);
+}
+
+
+/* =====================================================
+   HOPE BANNER
+===================================================== */
+
+.hope-banner {
+    width: min(1080px, calc(100% - 30px));
+
+    min-height: 310px;
+
+    margin: 25px auto 0;
+
+    display: flex;
+
+    background: #173d32;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(20,60,48,.14);
+}
+
+
+.hope-image {
+    width: 43%;
+}
+
+.hope-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.hope-content {
+    width: 57%;
+
+    padding: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hope-content > span {
+    margin-bottom: 10px;
+
+    color: #d6b84e;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.hope-content h2 {
+    max-width: 470px;
+
+    margin: 0 0 13px;
+
+    color: #ffffff;
+
+    font-size: 26px;
+
+    line-height: 1.7;
+
+    font-weight: 900;
+}
+
+.hope-content p {
+    max-width: 470px;
+
+    margin: 0 0 20px;
+
+    color: #cbd9d3;
+
+    font-size: 11px;
+
+    line-height: 2;
+}
+
+.hope-content a {
+    padding: 11px 18px;
+
+    display: inline-flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+    border-radius: 7px;
+
+    background: #d8ad2d;
+
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition: .25s ease;
+}
+
+.hope-content a:hover {
+    background: #c4991e;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.charity-footer {
+    margin-top: 80px;
+
+    padding: 45px max(20px, calc((100% - 1080px) / 2)) 25px;
+
+    background: #102f27;
+
+    color: #fff;
+}
+
+
+.footer-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding-bottom: 35px;
+
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+
+.footer-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+.footer-logo {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #d6ac2d;
+
+    color: #fff;
+
+    font-size: 22px;
+    font-weight: 900;
+}
+
+
+.footer-brand h3 {
+    margin: 0 0 4px;
+
+    font-size: 14px;
+}
+
+
+.footer-brand p {
+    margin: 0;
+
+    color: #9fb2aa;
+
+    font-size: 9px;
+}
+
+
+.footer-message {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    text-align: left;
+}
+
+
+.footer-message span {
+    color: #9fb2aa;
+
+    font-size: 9px;
+}
+
+
+.footer-message strong {
+    color: #fff;
+
+    font-size: 13px;
+}
+
+
+.footer-bottom {
+    padding-top: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #71877f;
+
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+/* 
+@media (max-width: 750px) {
+
+    .donation-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .donation-box {
+        min-height: 350px;
+    }
+
+    .hope-banner {
+        flex-direction: column;
+    }
+
+    .hope-image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .hope-content {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .footer-message {
+        text-align: right;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .donation-header {
+        padding-top: 65px;
+    }
+
+    .donation-header h1 {
+        font-size: 30px;
+    }
+
+    .donation-cards {
+        width: calc(100% - 20px);
+    }
+
+    .donation-box {
+        padding: 20px;
+        min-height: 340px;
+    }
+
+    .box-icon {
+        width: 58px;
+        height: 58px;
+    }
+
+    .box-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .info-row {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        gap: 3px;
+
+        padding: 8px 0;
+    }
+
+    .info-row strong {
+        text-align: right;
+    }
+
+    .hope-content h2 {
+        font-size: 20px;
+    }
+} */
+
+
+
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 76px;
+        right: 20px;
+        left: 20px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: white;
+        padding: 10px;
+        border: 1px solid var(--border);
+        border-radius: 13px;
+        box-shadow: var(--shadow);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 10px 12px;
+    }
+
+    .hero-banner {
+        height: 400px;
+    }
+
+    .hero-content {
+        width: 65%;
+        padding: 30px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat {
+        padding: 14px;
+        border-bottom: 1px solid rgba(255,255,255,.14);
+    }
+
+    /* در تبلت دو کارت کنار هم */
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .donate-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+@media (max-width: 580px) {
+
+    .container {
+        width: min(100% - 24px, 1120px);
+    }
+
+    .hero-banner {
+        height: 440px;
+        border-radius: 14px 14px 0 0;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(
+            90deg,
+            rgba(255,255,255,.95),
+            rgba(255,255,255,.65)
+        );
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 25px 20px;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 12px;
+    }
+
+    /* فقط این دو بخش تک‌ستونه باشند */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* پروژه‌ها و ویژگی‌ها سه‌تایی کنار هم */
+    .project-grid,
+    .feature-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project-grid {
+        gap: 6px;
+    }
+
+    .feature-grid {
+        gap: 8px;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .about-text h2 {
+        font-size: 25px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
