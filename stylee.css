@@ -37,13 +37,14 @@ a {
     margin-inline: auto;
 }
 
+
 /* ================= HEADER ================= */
 
 .header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255,255,255,.96);
+    background: rgba(255, 255, 255, .96);
     border-bottom: 1px solid var(--border);
     backdrop-filter: blur(12px);
 }
@@ -127,9 +128,7 @@ a {
 }
 
 
-/* =====================================================
-   PAGE
-===================================================== */
+/* ================= DONATION PAGE ================= */
 
 .donation-page {
     direction: rtl;
@@ -139,9 +138,7 @@ a {
 }
 
 
-/* =====================================================
-   HEADER
-===================================================== */
+/* ================= DONATION HEADER ================= */
 
 .donation-header {
     max-width: 760px;
@@ -152,24 +149,18 @@ a {
 
 .eyebrow {
     display: inline-block;
-
     padding: 8px 17px;
-
     background: #e4f1eb;
     color: #267155;
-
     border-radius: 50px;
-
     font-size: 11px;
     font-weight: 800;
 }
 
 .donation-header h1 {
     margin: 20px 0 12px;
-
     font-size: clamp(32px, 5vw, 48px);
     line-height: 1.35;
-
     font-weight: 900;
     letter-spacing: -1.5px;
 }
@@ -180,51 +171,32 @@ a {
 
 .donation-header p {
     margin: 0;
-
     color: #7b8982;
-
     font-size: 13px;
 }
 
 
-/* =====================================================
-   CARDS
-===================================================== */
+/* ================= DONATION CARDS ================= */
 
 .donation-cards {
     width: min(1080px, calc(100% - 30px));
-
     margin: auto;
-
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 20px;
 }
 
-
 .donation-box {
     position: relative;
-
     min-height: 390px;
-
     padding: 25px;
-
     background: #ffffff;
-
     border: 1px solid #e0e9e4;
-
     border-radius: 18px;
-
     overflow: hidden;
-
     display: flex;
     flex-direction: column;
-
-    box-shadow:
-        0 8px 30px rgba(28, 73, 58, .045);
-
+    box-shadow: 0 8px 30px rgba(28, 73, 58, .045);
     transition:
         transform .35s ease,
         box-shadow .35s ease,
@@ -232,33 +204,24 @@ a {
 }
 
 
-/* decorative corner */
+/* ================= DECORATIVE CORNER ================= */
 
 .donation-box::after {
     content: "";
-
     position: absolute;
-
     width: 150px;
     height: 150px;
-
     left: -80px;
     bottom: -90px;
-
     border-radius: 50%;
-
     background: #eef6f1;
-
     transition: .4s ease;
 }
 
 .donation-box:hover {
     transform: translateY(-7px);
-
     border-color: #cbded5;
-
-    box-shadow:
-        0 20px 50px rgba(27, 70, 55, .11);
+    box-shadow: 0 20px 50px rgba(27, 70, 55, .11);
 }
 
 .donation-box:hover::after {
@@ -266,46 +229,34 @@ a {
 }
 
 
-/* =====================================================
-   CARD HEADER
-===================================================== */
+/* ================= CARD HEADER ================= */
 
 .box-header {
     position: relative;
     z-index: 2;
-
     display: flex;
-
     align-items: flex-start;
     justify-content: space-between;
 }
 
 .box-number {
     color: #b4c1ba;
-
     font-family: monospace;
-
     font-size: 11px;
     font-weight: bold;
-
     letter-spacing: 2px;
 }
 
 
-/* =====================================================
-   ICON
-===================================================== */
+/* ================= ICON ================= */
 
 .box-icon {
     width: 70px;
     height: 70px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 18px;
-
     transition: .35s ease;
 }
 
@@ -319,7 +270,7 @@ a {
 }
 
 
-/* COLORS */
+/* ================= ICON COLORS ================= */
 
 .box-icon.green {
     background: #e6f3ec;
@@ -342,69 +293,48 @@ a {
 }
 
 
-/* =====================================================
-   TITLE
-===================================================== */
+/* ================= TITLE ================= */
 
 .box-title {
     position: relative;
     z-index: 2;
-
     margin-top: 22px;
 }
 
 .box-title h2 {
     margin: 0 0 8px;
-
     color: #183a30;
-
     font-size: 18px;
     font-weight: 900;
 }
 
 .box-title p {
     max-width: 400px;
-
     margin: 0;
-
     color: #7a8881;
-
     font-size: 11px;
-
     line-height: 2;
 }
 
 
-/* =====================================================
-   INFORMATION AREA
-===================================================== */
+/* ================= INFORMATION AREA ================= */
 
 .information-area {
     position: relative;
     z-index: 3;
-
     margin-top: 20px;
-
     padding: 5px 15px;
-
     background: #f7faf8;
-
     border: 1px solid #e8efeb;
-
     border-radius: 10px;
 }
 
-
 .info-row {
     min-height: 48px;
-
     display: flex;
-
     align-items: center;
     justify-content: space-between;
-
     gap: 15px;
-
     border-bottom: 1px dashed #dfe8e3;
 }
 
@@ -414,55 +344,39 @@ a {
 
 .info-row span {
     color: #829089;
-
     font-size: 9px;
 }
 
 .info-row strong {
     color: #304c42;
-
     font-size: 10px;
-
     text-align: left;
 }
 
 
-/* =====================================================
-   QR AREA
-===================================================== */
+/* ================= QR AREA ================= */
 
 .qr-area {
     position: relative;
     z-index: 3;
-
     margin-top: 20px;
-
     padding: 14px;
-
     display: flex;
-
     align-items: center;
-
     gap: 18px;
-
     background: #f7faf8;
-
     border: 1px solid #e5ede8;
-
     border-radius: 10px;
 }
 
 .qr-placeholder {
     width: 95px;
     height: 95px;
-
     flex-shrink: 0;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     background:
         repeating-linear-gradient(
             45deg,
@@ -471,72 +385,53 @@ a {
             #ffffff 3px,
             #ffffff 7px
         );
-
     border: 7px solid #fff;
-
-    box-shadow:
-        0 4px 15px rgba(0,0,0,.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
 }
 
 .qr-placeholder span {
     padding: 3px 6px;
-
     background: #fff;
-
     color: #183d31;
-
     font-size: 17px;
     font-weight: 900;
 }
 
 .qr-placeholder small {
     margin-top: 3px;
-
     background: #fff;
-
     color: #555;
-
     font-size: 7px;
 }
 
 .qr-text {
     display: flex;
     flex-direction: column;
-
     gap: 6px;
 }
 
 .qr-text strong {
     color: #284d40;
-
     font-size: 12px;
 }
 
 .qr-text span {
     color: #84918b;
-
     font-size: 9px;
 }
 
 
-/* =====================================================
-   CARD FOOTER
-===================================================== */
+/* ================= CARD FOOTER ================= */
 
 .box-footer {
     position: relative;
     z-index: 4;
-
     margin-top: auto;
     padding-top: 20px;
-
     display: flex;
-
     align-items: center;
     justify-content: space-between;
-
     color: #287359;
-
     font-size: 10px;
     font-weight: 800;
 }
@@ -544,50 +439,33 @@ a {
 .arrow {
     width: 30px;
     height: 30px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
-
     background: #e9f4ef;
-
     transition: .25s ease;
 }
 
 .donation-box:hover .arrow {
     background: #287359;
-
     color: #fff;
-
     transform: translateX(-4px);
 }
 
 
-/* =====================================================
-   HOPE BANNER
-===================================================== */
+/* ================= HOPE BANNER ================= */
 
 .hope-banner {
     width: min(1080px, calc(100% - 30px));
-
     min-height: 310px;
-
     margin: 25px auto 0;
-
     display: flex;
-
     background: #173d32;
-
     border-radius: 20px;
-
     overflow: hidden;
-
-    box-shadow:
-        0 20px 50px rgba(20,60,48,.14);
+    box-shadow: 0 20px 50px rgba(20, 60, 48, .14);
 }
-
 
 .hope-image {
     width: 43%;
@@ -596,18 +474,13 @@ a {
 .hope-image img {
     width: 100%;
     height: 100%;
-
     display: block;
-
     object-fit: cover;
 }
 
-
 .hope-content {
     width: 57%;
-
     padding: 45px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -616,282 +489,123 @@ a {
 
 .hope-content > span {
     margin-bottom: 10px;
-
     color: #d6b84e;
-
     font-size: 10px;
     font-weight: 800;
 }
 
 .hope-content h2 {
     max-width: 470px;
-
     margin: 0 0 13px;
-
     color: #ffffff;
-
     font-size: 26px;
-
     line-height: 1.7;
-
     font-weight: 900;
 }
 
 .hope-content p {
     max-width: 470px;
-
     margin: 0 0 20px;
-
     color: #cbd9d3;
-
     font-size: 11px;
-
     line-height: 2;
 }
 
 .hope-content a {
     padding: 11px 18px;
-
     display: inline-flex;
-
     gap: 10px;
-
     align-items: center;
-
     border-radius: 7px;
-
     background: #d8ad2d;
-
     color: #fff;
-
     font-size: 10px;
     font-weight: 800;
-
     text-decoration: none;
-
     transition: .25s ease;
 }
 
 .hope-content a:hover {
     background: #c4991e;
-
     transform: translateY(-2px);
 }
 
 
-/* =====================================================
-   FOOTER
-===================================================== */
+/* ================= FOOTER ================= */
 
 .charity-footer {
     margin-top: 80px;
-
     padding: 45px max(20px, calc((100% - 1080px) / 2)) 25px;
-
     background: #102f27;
-
     color: #fff;
 }
 
-
 .footer-top {
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     gap: 30px;
-
     padding-bottom: 35px;
-
-    border-bottom: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
-
 
 .footer-brand {
     display: flex;
-
     align-items: center;
-
     gap: 13px;
 }
-
 
 .footer-logo {
     width: 45px;
     height: 45px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     border-radius: 12px;
-
     background: #d6ac2d;
-
     color: #fff;
-
     font-size: 22px;
     font-weight: 900;
 }
 
-
 .footer-brand h3 {
     margin: 0 0 4px;
-
     font-size: 14px;
 }
 
-
 .footer-brand p {
     margin: 0;
-
     color: #9fb2aa;
-
     font-size: 9px;
 }
-
 
 .footer-message {
     display: flex;
-
     flex-direction: column;
-
     gap: 5px;
-
     text-align: left;
 }
 
-
 .footer-message span {
     color: #9fb2aa;
-
     font-size: 9px;
 }
 
-
 .footer-message strong {
     color: #fff;
-
     font-size: 13px;
 }
 
-
 .footer-bottom {
     padding-top: 20px;
-
     display: flex;
-
     justify-content: space-between;
-
     color: #71877f;
-
     font-size: 8px;
 }
 
 
-/* =====================================================
-   RESPONSIVE
-===================================================== */
-/* 
-@media (max-width: 750px) {
-
-    .donation-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .donation-box {
-        min-height: 350px;
-    }
-
-    .hope-banner {
-        flex-direction: column;
-    }
-
-    .hope-image {
-        width: 100%;
-        height: 200px;
-    }
-
-    .hope-content {
-        width: 100%;
-        padding: 30px;
-    }
-
-    .footer-top {
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
-
-    .footer-message {
-        text-align: right;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-
-        gap: 8px;
-    }
-}
-
-
-@media (max-width: 450px) {
-
-    .donation-header {
-        padding-top: 65px;
-    }
-
-    .donation-header h1 {
-        font-size: 30px;
-    }
-
-    .donation-cards {
-        width: calc(100% - 20px);
-    }
-
-    .donation-box {
-        padding: 20px;
-        min-height: 340px;
-    }
-
-    .box-icon {
-        width: 58px;
-        height: 58px;
-    }
-
-    .box-icon svg {
-        width: 32px;
-        height: 32px;
-    }
-
-    .info-row {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        justify-content: center;
-
-        gap: 3px;
-
-        padding: 8px 0;
-    }
-
-    .info-row strong {
-        text-align: right;
-    }
-
-    .hope-content h2 {
-        font-size: 20px;
-    }
-} */
-
-
-
-
-
-/* ================= RESPONSIVE ================= */
+/* ================= TABLET ================= */
 
 @media (max-width: 850px) {
 
@@ -908,7 +622,7 @@ a {
         flex-direction: column;
         align-items: stretch;
         gap: 0;
-        background: white;
+        background: #fff;
         padding: 10px;
         border: 1px solid var(--border);
         border-radius: 13px;
@@ -923,107 +637,388 @@ a {
         padding: 10px 12px;
     }
 
-    .hero-banner {
-        height: 400px;
+
+    /* Donation */
+
+    .donation-header {
+        padding: 75px 25px 45px;
     }
 
-    .hero-content {
-        width: 65%;
-        padding: 30px;
+    .donation-header h1 {
+        font-size: 40px;
+        line-height: 1.5;
     }
 
-    .hero h1 {
-        font-size: 34px;
+    .donation-header p {
+        font-size: 13px;
+        line-height: 2;
     }
 
-    .stats {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .stat {
-        padding: 14px;
-        border-bottom: 1px solid rgba(255,255,255,.14);
-    }
-
-    /* در تبلت دو کارت کنار هم */
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .about-grid {
+    .donation-cards {
         grid-template-columns: 1fr;
+        width: min(700px, calc(100% - 30px));
     }
 
-    .donate-box {
+    .donation-box {
+        min-height: 360px;
+    }
+
+
+    /* Hope banner */
+
+    .hope-banner {
+        flex-direction: column;
+    }
+
+    .hope-image {
+        width: 100%;
+        height: 240px;
+    }
+
+    .hope-content {
+        width: 100%;
+        padding: 35px;
+    }
+
+    .hope-content h2 {
+        font-size: 24px;
+        line-height: 1.7;
+    }
+
+    .hope-content p {
+        font-size: 11px;
+        line-height: 2;
+    }
+
+
+    /* Footer */
+
+    .footer-top {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .footer-message {
+        text-align: right;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
     }
 }
 
 
+/* ================= MOBILE ================= */
+
 @media (max-width: 580px) {
 
     .container {
-        width: min(100% - 24px, 1120px);
+        width: calc(100% - 24px);
     }
 
-    .hero-banner {
-        height: 440px;
-        border-radius: 14px 14px 0 0;
+
+    /* Header */
+
+    .nav {
+        min-height: 68px;
     }
 
-    .hero-overlay {
-        background: linear-gradient(
-            90deg,
-            rgba(255,255,255,.95),
-            rgba(255,255,255,.65)
-        );
+    .logo img {
+        width: 40px;
+        height: 40px;
     }
 
-    .hero-content {
-        width: 100%;
-        padding: 25px 20px;
-        justify-content: center;
+    .logo strong {
+        font-size: 13px;
     }
 
-    .hero h1 {
-        font-size: 30px;
+    .logo small {
+        font-size: 9px;
     }
 
-    .hero p {
-        font-size: 12px;
+    .menu {
+        top: 68px;
+        right: 12px;
+        left: 12px;
     }
 
-    /* فقط این دو بخش تک‌ستونه باشند */
-    .contact-grid {
-        grid-template-columns: 1fr;
+
+    /* Donation header */
+
+    .donation-header {
+        padding: 60px 20px 35px;
     }
 
-    /* پروژه‌ها و ویژگی‌ها سه‌تایی کنار هم */
-    .project-grid,
-    .feature-grid {
-        grid-template-columns: repeat(3, 1fr);
+    .eyebrow {
+        padding: 7px 14px;
+        font-size: 10px;
     }
 
-    .project-grid {
-        gap: 6px;
+    .donation-header h1 {
+        margin: 16px 0 10px;
+        font-size: 29px;
+        line-height: 1.65;
+        letter-spacing: -.5px;
     }
 
-    .feature-grid {
+    .donation-header p {
+        font-size: 11px;
+        line-height: 2;
+        padding: 0 8px;
+    }
+
+
+    /* Donation cards */
+
+    .donation-cards {
+        width: calc(100% - 20px);
+        gap: 14px;
+    }
+
+    .donation-box {
+        min-height: auto;
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .box-header {
+        align-items: center;
+    }
+
+    .box-number {
+        font-size: 10px;
+    }
+
+    .box-icon {
+        width: 58px;
+        height: 58px;
+        border-radius: 15px;
+    }
+
+    .box-icon svg {
+        width: 31px;
+        height: 31px;
+    }
+
+
+    /* Card text */
+
+    .box-title {
+        margin-top: 18px;
+    }
+
+    .box-title h2 {
+        font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: 5px;
+    }
+
+    .box-title p {
+        max-width: none;
+        font-size: 11px;
+        line-height: 2;
+    }
+
+
+    /* Information */
+
+    .information-area {
+        margin-top: 16px;
+        padding: 4px 12px;
+    }
+
+    .info-row {
+        min-height: 45px;
         gap: 8px;
     }
 
-    .section {
-        padding: 55px 0;
+    .info-row span {
+        font-size: 9px;
+        white-space: nowrap;
     }
 
-    .about-text h2 {
-        font-size: 25px;
+    .info-row strong {
+        font-size: 9px;
+        line-height: 1.8;
+        overflow-wrap: anywhere;
     }
 
-    .footer-inner {
-        flex-direction: column;
-        text-align: center;
+
+    /* QR */
+
+    .qr-area {
+        margin-top: 16px;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .qr-placeholder {
+        width: 78px;
+        height: 78px;
+    }
+
+    .qr-placeholder span {
+        font-size: 14px;
+    }
+
+    .qr-text strong {
+        font-size: 11px;
+    }
+
+    .qr-text span {
+        font-size: 8px;
+    }
+
+
+    /* Card footer */
+
+    .box-footer {
+        padding-top: 17px;
+        font-size: 9px;
+    }
+
+    .arrow {
+        width: 27px;
+        height: 27px;
+    }
+
+
+    /* Hope banner */
+
+    .hope-banner {
+        width: calc(100% - 20px);
+        margin-top: 18px;
+        border-radius: 16px;
+    }
+
+    .hope-image {
+        width: 100%;
+        height: 190px;
+    }
+
+    .hope-content {
+        width: 100%;
+        padding: 25px 22px 28px;
+    }
+
+    .hope-content > span {
+        font-size: 9px;
+        margin-bottom: 7px;
+    }
+
+    .hope-content h2 {
+        font-size: 20px;
+        line-height: 1.8;
+        margin-bottom: 10px;
+    }
+
+    .hope-content p {
+        font-size: 10px;
+        line-height: 2;
+        margin-bottom: 16px;
+    }
+
+    .hope-content a {
+        padding: 10px 15px;
+        font-size: 9px;
+    }
+
+
+    /* Footer */
+
+    .charity-footer {
+        margin-top: 55px;
+        padding: 35px 20px 20px;
+    }
+
+    .footer-top {
+        gap: 22px;
+        padding-bottom: 25px;
+    }
+
+    .footer-brand {
         gap: 10px;
+    }
+
+    .footer-logo {
+        width: 40px;
+        height: 40px;
+        font-size: 19px;
+    }
+
+    .footer-brand h3 {
+        font-size: 13px;
+    }
+
+    .footer-brand p {
+        font-size: 8px;
+    }
+
+    .footer-message {
+        gap: 3px;
+        text-align: right;
+    }
+
+    .footer-message span {
+        font-size: 8px;
+    }
+
+    .footer-message strong {
+        font-size: 11px;
+    }
+
+    .footer-bottom {
+        padding-top: 17px;
+        gap: 6px;
+        font-size: 7px;
+        line-height: 1.8;
+    }
+}
+
+
+/* ================= VERY SMALL MOBILE ================= */
+
+@media (max-width: 380px) {
+
+    .donation-header {
+        padding-inline: 15px;
+    }
+
+    .donation-header h1 {
+        font-size: 26px;
+    }
+
+    .donation-header p {
+        font-size: 10px;
+    }
+
+    .donation-box {
+        padding: 17px;
+    }
+
+    .box-title h2 {
+        font-size: 16px;
+    }
+
+    .box-title p {
+        font-size: 10px;
+    }
+
+    .info-row {
+        flex-wrap: wrap;
+    }
+
+    .info-row strong {
+        font-size: 8px;
+        max-width: 100%;
+    }
+
+    .hope-content h2 {
+        font-size: 18px;
+    }
+
+    .hope-content p {
+        font-size: 9px;
     }
 }
