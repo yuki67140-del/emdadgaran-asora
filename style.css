@@ -650,6 +650,21 @@ a {
 }
 
 
+
+.team-link {
+    color: #f3b927;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.team-link:hover {
+    color: #ffffff;
+}
+
+
 /* ================= TABLET ================= */
 
 @media (max-width: 850px) {
