@@ -1,0 +1,920 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --green: #07533e;
+    --green-dark: #043d2f;
+    --green-light: #e9f2ee;
+
+    --yellow: #f3b927;
+
+    --text: #26332e;
+    --muted: #74807b;
+
+    --white: #ffffff;
+
+    --border: #e5e9e6;
+
+    --shadow:
+        0 12px 35px rgba(9, 57, 43, .08);
+}
+
+
+/* =========================
+   GLOBAL
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    background: #ffffff;
+
+    color: var(--text);
+
+    font-family:
+        "Vazirmatn",
+        Tahoma,
+        sans-serif;
+
+    line-height: 1.8;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: min(
+        1120px,
+        calc(100% - 40px)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(255, 255, 255, .96);
+
+    border-bottom:
+        1px solid var(--border);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+
+.nav {
+    min-height: 76px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 0;
+
+    color: var(--green);
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+
+    flex: 0 0 45px;
+
+    object-fit: contain;
+}
+
+.logo strong,
+.logo small {
+    display: block;
+}
+
+.logo strong {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.logo small {
+    color: var(--muted);
+
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* MENU */
+
+.menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    color: #47534e;
+
+    font-size: 13px;
+}
+
+.menu a {
+    transition:
+        color .25s ease;
+}
+
+.menu a:hover {
+    color: var(--green);
+}
+
+
+/* DONATE */
+
+.nav-donate {
+    padding: 9px 17px;
+
+    background: var(--yellow);
+
+    color: #292315 !important;
+
+    border-radius: 9px;
+
+    font-weight: 700;
+}
+
+
+/* MOBILE MENU BUTTON */
+
+.menu-btn {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: var(--green);
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+
+.projects-section {
+    padding: 80px 20px;
+
+    background: #ffffff;
+}
+
+.projects-container {
+    width: min(
+        1150px,
+        100%
+    );
+
+    margin-inline: auto;
+}
+
+
+/* HEADING */
+
+.projects-heading {
+    margin-bottom: 35px;
+
+    text-align: center;
+}
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    padding: 6px 14px;
+
+    background: var(--green-light);
+
+    color: var(--green);
+
+    border-radius: 50px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.projects-heading h1 {
+    margin-bottom: 12px;
+
+    color: var(--text);
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    line-height: 1.5;
+}
+
+.projects-heading p {
+    max-width: 600px;
+
+    margin-inline: auto;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    line-height: 2;
+}
+
+
+/* =========================
+   FILTERS
+========================= */
+
+.project-filters {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 35px;
+}
+
+.filter-btn {
+    padding: 10px 25px;
+
+    border:
+        1px solid #e3e7e4;
+
+    border-radius: 50px;
+
+    background: #ffffff;
+
+    color: #52605a;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--green);
+
+    color: var(--green);
+}
+
+.filter-btn.active {
+    background: var(--green);
+
+    border-color: var(--green);
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   PROJECT GRID
+========================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+/* =========================
+   PROJECT CARD
+========================= */
+
+.project-card {
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #ffffff;
+
+    border:
+        1px solid #e6e9e7;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, .04);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.project-card:hover {
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, .08);
+}
+
+
+/* IMAGE */
+
+.project-image {
+    width: 100%;
+
+    height: 210px;
+
+    overflow: hidden;
+
+    background: #eef2ef;
+
+    flex-shrink: 0;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform .5s ease;
+}
+
+.project-card:hover
+.project-image img {
+    transform:
+        scale(1.04);
+}
+
+
+/* CONTENT */
+
+.project-content {
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 22px;
+}
+
+.project-content h2 {
+    margin-bottom: 10px;
+
+    color: var(--text);
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    line-height: 1.6;
+}
+
+.project-content p {
+    margin-bottom: 20px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 2;
+}
+
+
+/* CARD BUTTON */
+
+.project-btn {
+    width: fit-content;
+
+    min-width: 130px;
+
+    margin-top: auto;
+
+    padding: 10px 18px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--green);
+
+    color: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: .25s ease;
+}
+
+.project-btn:hover {
+    background: var(--green-dark);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================
+   MORE BUTTON
+========================= */
+
+.projects-more {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 35px;
+}
+
+.all-projects-btn {
+    padding: 13px 30px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--green);
+
+    color: #ffffff;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: .25s ease;
+}
+
+.all-projects-btn:hover {
+    background: var(--green-dark);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.charity-footer {
+    margin-top: 80px;
+
+    padding:
+        45px
+        max(20px, calc((100% - 1080px) / 2))
+        25px;
+
+    background: #102f27;
+
+    color: #ffffff;
+}
+
+
+/* FOOTER TOP */
+
+.footer-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding-bottom: 35px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, .1);
+}
+
+
+/* FOOTER BRAND */
+
+.footer-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+.footer-logo {
+    width: 45px;
+    height: 45px;
+
+    flex: 0 0 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #d6ac2d;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    font-weight: 900;
+}
+
+.footer-brand h3 {
+    margin-bottom: 4px;
+
+    font-size: 14px;
+}
+
+.footer-brand p {
+    color: #9fb2aa;
+
+    font-size: 9px;
+}
+
+
+/* FOOTER MESSAGE */
+
+.footer-message {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    text-align: left;
+}
+
+.footer-message span {
+    color: #9fb2aa;
+
+    font-size: 9px;
+}
+
+.footer-message strong {
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding-top: 20px;
+
+    color: #71877f;
+
+    font-size: 8px;
+}
+
+
+/* =========================
+   TABLET
+   تا 850px
+========================= */
+
+@media (max-width: 850px) {
+
+    /* MENU BUTTON */
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    /* MOBILE MENU */
+
+    .menu {
+        position: absolute;
+
+        top:
+            calc(100% + 8px);
+
+        right: 20px;
+        left: 20px;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: 10px;
+
+        background: #ffffff;
+
+        border:
+            1px solid var(--border);
+
+        border-radius: 13px;
+
+        box-shadow: var(--shadow);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 11px 12px;
+
+        border-radius: 8px;
+    }
+
+    .menu a:hover {
+        background:
+            var(--green-light);
+    }
+
+    .nav-donate {
+        margin-top: 5px;
+
+        text-align: center;
+    }
+
+
+    /* PROJECTS */
+
+    .projects-section {
+        padding: 60px 16px;
+    }
+
+    .projects-heading h1 {
+        font-size: 27px;
+    }
+
+
+    /* ONE COLUMN */
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* FOOTER */
+
+    .footer-top {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .footer-message {
+        text-align: right;
+    }
+}
+
+
+/* =========================
+   MOBILE
+   تا 500px
+========================= */
+
+@media (max-width: 500px) {
+
+    /* CONTAINER */
+
+    .container {
+        width:
+            min(
+                calc(100% - 28px),
+                1120px
+            );
+    }
+
+
+    /* HEADER */
+
+    .nav {
+        min-height: 68px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+
+        flex-basis: 40px;
+    }
+
+    .logo strong {
+        font-size: 13px;
+    }
+
+    .logo small {
+        font-size: 9px;
+    }
+
+
+    /* MENU */
+
+    .menu {
+        right: 14px;
+        left: 14px;
+    }
+
+
+    /* PROJECT SECTION */
+
+    .projects-section {
+        padding: 50px 14px;
+    }
+
+    .projects-heading {
+        margin-bottom: 28px;
+    }
+
+    .projects-heading h1 {
+        font-size: 24px;
+    }
+
+    .projects-heading p {
+        font-size: 12px;
+
+        line-height: 1.9;
+    }
+
+
+    /* FILTERS */
+
+    .project-filters {
+        gap: 8px;
+
+        margin-bottom: 25px;
+    }
+
+    .filter-btn {
+        padding: 8px 15px;
+
+        font-size: 11px;
+    }
+
+
+    /* CARD */
+
+    .project-card {
+        border-radius: 15px;
+    }
+
+    .project-image {
+        height: 190px;
+    }
+
+    .project-content {
+        padding: 18px;
+    }
+
+    .project-content h2 {
+        font-size: 16px;
+    }
+
+    .project-content p {
+        font-size: 12px;
+
+        line-height: 1.9;
+    }
+
+
+    /* BUTTON */
+
+    .project-btn,
+    .all-projects-btn {
+        width: 100%;
+    }
+
+
+    /* MORE */
+
+    .projects-more {
+        margin-top: 25px;
+    }
+
+
+    /* FOOTER */
+
+    .charity-footer {
+        margin-top: 50px;
+
+        padding:
+            35px 14px 20px;
+    }
+
+    .footer-top {
+        gap: 25px;
+
+        padding-bottom: 25px;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .footer-message strong {
+        font-size: 11px;
+    }
+}
