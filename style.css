@@ -37,13 +37,14 @@ a {
     margin-inline: auto;
 }
 
+
 /* ================= HEADER ================= */
 
 .header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(255,255,255,.96);
+    background: rgba(255, 255, 255, .96);
     border-bottom: 1px solid var(--border);
     backdrop-filter: blur(12px);
 }
@@ -143,6 +144,8 @@ a {
 .hero-photo {
     position: absolute;
     inset: 0;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -150,37 +153,29 @@ a {
     width: 100%;
     height: 100%;
     display: block;
-
-    /* عکس کل کادر را پر می‌کند */
     object-fit: cover;
-
-    /* دختر در سمت راست تصویر باقی می‌ماند */
     object-position: 75% center;
 }
 
-/* لایه روشن برای نوشته */
-/* .hero-overlay {
+.hero-overlay {
     position: absolute;
     inset: 0;
     z-index: 1;
-
     background: linear-gradient(
         to left,
-        rgba(255,255,255,0) 25%,
-        rgba(255,255,255,.35) 55%,
-        rgba(255,255,255,.92) 82%,
-        rgba(255,255,255,.98) 100%
+        rgba(255, 255, 255, 0) 25%,
+        rgba(255, 255, 255, .35) 55%,
+        rgba(255, 255, 255, .92) 82%,
+        rgba(255, 255, 255, .98) 100%
     );
-} */
+}
 
 .hero-content {
     position: absolute;
     z-index: 2;
     inset: 0;
-
     width: 55%;
     padding: 48px 50px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -221,10 +216,8 @@ a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
     min-height: 43px;
     padding: 8px 22px;
-
     border-radius: 9px;
     font-size: 13px;
     font-weight: 700;
@@ -242,7 +235,7 @@ a {
 
 .secondary {
     border: 1px solid #c9d4cf;
-    background: rgba(255,255,255,.9);
+    background: rgba(255, 255, 255, .9);
 }
 
 
@@ -251,11 +244,8 @@ a {
 .stats {
     background: var(--green);
     color: white;
-
     min-height: 83px;
-
     border-radius: 0 0 18px 18px;
-
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
@@ -265,8 +255,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    border-left: 1px solid rgba(255,255,255,.14);
+    border-left: 1px solid rgba(255, 255, 255, .14);
 }
 
 .stat:last-child {
@@ -280,68 +269,6 @@ a {
 .stat span {
     font-size: 10px;
     opacity: .75;
-}
-
-
-/* ================= موبایل ================= */
-
-@media (max-width: 580px) {
-
-    .hero {
-        padding-top: 12px;
-    }
-
-    .hero-banner {
-        height: 440px;
-        border-radius: 14px 14px 0 0;
-    }
-
-    .hero-photo img {
-    
-        object-position: 68% center;
-    }
-
-    .hero-overlay {
-        background: linear-gradient(
-            to left,
-            rgba(255,255,255,.05) 10%,
-            rgba(255,255,255,.45) 45%,
-            rgba(255,255,255,.92) 78%,
-            rgba(255,255,255,.98) 100%
-        );
-    }
-
-    .hero-content {
-        width: 62%;
-        padding: 25px 18px;
-    }
-
-    .hero h1 {
-        font-size: 29px;
-    }
-
-    .hero p {
-        font-size: 11px;
-        line-height: 1.8;
-    }
-
-    .hero-buttons {
-        gap: 7px;
-    }
-
-    .btn {
-        min-height: 38px;
-        padding: 6px 13px;
-        font-size: 10px;
-    }
-
-    .stats {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .stat {
-        padding: 12px;
-    }
 }
 
 
@@ -486,83 +413,6 @@ a {
 }
 
 
-/* ================= PROJECTS + FEATURES ON MOBILE ================= */
-
-@media (max-width: 580px) {
-
-    /* سه کارت کنار هم */
-    .project-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 6px;
-    }
-
-    .project-card {
-        border-radius: 8px;
-    }
-
-    .project-image {
-        height: 90px;
-    }
-
-    .project-body {
-        padding: 7px;
-    }
-
-    .tag {
-        font-size: 6px;
-        padding: 1px 5px;
-    }
-
-    .project-body h3 {
-        font-size: 9px;
-        line-height: 1.5;
-        margin: 4px 0;
-    }
-
-    .project-body p {
-        font-size: 7px;
-        line-height: 1.6;
-        min-height: 0;
-    }
-
-    .card-link {
-        font-size: 7px;
-        margin-top: 5px;
-    }
-
-    .project-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
-
-
-    /* سه ویژگی هم کنار هم */
-    .feature-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
-    }
-
-    .feature-icon {
-        width: 32px;
-        height: 32px;
-        font-size: 15px;
-        margin-bottom: 6px;
-    }
-
-    .feature h3 {
-        font-size: 8px;
-        line-height: 1.5;
-    }
-
-    .feature p {
-        font-size: 7px;
-        line-height: 1.5;
-    }
-}
-
-
 /* ================= ABOUT ================= */
 
 .about-grid {
@@ -570,12 +420,6 @@ a {
     grid-template-columns: .9fr 1.1fr;
     gap: 55px;
     align-items: center;
-}
-
-.about-image {
-    height: 330px;
-    border-radius: 18px;
-    overflow: hidden;
 }
 
 .about-image {
@@ -675,240 +519,6 @@ a {
 }
 
 
-/* ================= FOOTER ================= */
-
-
-.charity-footer {
-    margin-top: 80px;
-    padding: 45px max(20px, calc((100% - 1080px) / 2)) 25px;
-    background: #102f27;
-    color: #fff;
-}
-
-.footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    padding-bottom: 35px;
-    border-bottom: 1px solid rgba(255,255,255,.1);
-}
-
-.footer-brand {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-}
-
-.footer-logo {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    background: #d6ac2d;
-    color: #fff;
-    font-size: 22px;
-    font-weight: 900;
-}
-
-.footer-brand h3 {
-    margin: 0 0 4px;
-    font-size: 14px;
-}
-
-
-.footer-brand p {
-    margin: 0;
-    color: #9fb2aa;
-    font-size: 9px;
-}
-
-.footer-message {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    text-align: left;
-}
-
-.footer-message span {
-    color: #9fb2aa;
-    font-size: 9px;
-}
-
-.footer-message strong {
-    color: #fff;
-    font-size: 13px;
-}
-
-.footer-bottom {
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    color: #71877f;
-    font-size: 8px;
-}
-
-
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 850px) {
-
-    .menu-btn {
-        display: block;
-    }
-
-    .menu {
-        position: absolute;
-        top: 76px;
-        right: 20px;
-        left: 20px;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-        background: white;
-        padding: 10px;
-        border: 1px solid var(--border);
-        border-radius: 13px;
-        box-shadow: var(--shadow);
-    }
-
-    .menu.active {
-        display: flex;
-    }
-
-    .menu a {
-        padding: 10px 12px;
-    }
-
-    .hero-banner {
-        height: 400px;
-    }
-
-    .hero-content {
-        width: 65%;
-        padding: 30px;
-    }
-
-    .hero h1 {
-        font-size: 34px;
-    }
-
-    .stats {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .stat {
-        padding: 14px;
-        border-bottom: 1px solid rgba(255,255,255,.14);
-    }
-
-    /* در تبلت دو کارت کنار هم */
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .donate-box {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-
-@media (max-width: 580px) {
-
-    .container {
-        width: min(100% - 24px, 1120px);
-    }
-
-    .hero-banner {
-        height: 440px;
-        border-radius: 14px 14px 0 0;
-    }
-
-    .hero-overlay {
-        background: linear-gradient(
-            90deg,
-            rgba(255,255,255,.95),
-            rgba(255,255,255,.65)
-        );
-    }
-
-    .hero-content {
-        width: 100%;
-        padding: 25px 20px;
-        justify-content: center;
-    }
-
-    .hero h1 {
-        font-size: 30px;
-    }
-
-    .hero p {
-        font-size: 12px;
-    }
-
-    /* فقط این دو بخش تک‌ستونه باشند */
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* پروژه‌ها و ویژگی‌ها سه‌تایی کنار هم */
-    .project-grid,
-    .feature-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .project-grid {
-        gap: 6px;
-    }
-
-    .feature-grid {
-        gap: 8px;
-    }
-
-    .section {
-        padding: 55px 0;
-    }
-
-    .about-text h2 {
-        font-size: 25px;
-    }
-
-    .footer-inner {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-    .branch-info {
-    padding: 40px 0;
-    
-}
-
-.branch-card {
-    padding: 18px;
-    border-radius: 14px;
-}
-
-.branch-heading h2 {
-    font-size: 19px;
-}
-
-.branch-heading p {
-    font-size: 9px;
-}
-
-.branch-image {
-    border-radius: 9px;
-}
-}
-
 /* ================= BRANCH INFO ================= */
 
 .branch-info {
@@ -963,4 +573,396 @@ a {
     width: 100%;
     height: auto;
     display: block;
+}
+
+
+/* ================= FOOTER ================= */
+
+.charity-footer {
+    margin-top: 80px;
+    padding: 45px max(20px, calc((100% - 1080px) / 2)) 25px;
+    background: #102f27;
+    color: #fff;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.footer-logo {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #d6ac2d;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.footer-brand h3 {
+    margin: 0 0 4px;
+    font-size: 14px;
+}
+
+.footer-brand p {
+    margin: 0;
+    color: #9fb2aa;
+    font-size: 9px;
+}
+
+.footer-message {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+}
+
+.footer-message span {
+    color: #9fb2aa;
+    font-size: 9px;
+}
+
+.footer-message strong {
+    color: #fff;
+    font-size: 13px;
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: #71877f;
+    font-size: 8px;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 850px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 76px;
+        right: 20px;
+        left: 20px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: white;
+        padding: 10px;
+        border: 1px solid var(--border);
+        border-radius: 13px;
+        box-shadow: var(--shadow);
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 10px 12px;
+    }
+
+    /* Hero */
+
+    .hero-banner {
+        height: 400px;
+    }
+
+    .hero-content {
+        width: 65%;
+        padding: 30px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-photo img {
+        object-position: 70% center;
+    }
+
+    /* Stats */
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat {
+        padding: 14px;
+        border-bottom: 1px solid rgba(255, 255, 255, .14);
+    }
+
+    /* Projects */
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* About */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Donate */
+
+    .donate-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 580px) {
+
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    /* Hero */
+
+    .hero {
+        padding-top: 12px;
+    }
+
+    .hero-banner {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        border-radius: 14px 14px 0 0;
+    }
+
+    .hero-photo {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-photo img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .hero-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, .95),
+            rgba(255, 255, 255, .35)
+        );
+    }
+
+    .hero-content {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        width: 100%;
+        padding: 25px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .hero-buttons {
+        gap: 7px;
+    }
+
+    .btn {
+        min-height: 38px;
+        padding: 6px 13px;
+        font-size: 10px;
+    }
+
+
+    /* Stats */
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat {
+        padding: 12px;
+    }
+
+
+    /* Sections */
+
+    .section {
+        padding: 55px 0;
+    }
+
+
+    /* Projects - سه کارت کنار هم */
+
+    .project-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+    }
+
+    .project-card {
+        border-radius: 8px;
+    }
+
+    .project-image {
+        height: 90px;
+    }
+
+    .project-body {
+        padding: 7px;
+    }
+
+    .tag {
+        font-size: 6px;
+        padding: 1px 5px;
+    }
+
+    .project-body h3 {
+        font-size: 9px;
+        line-height: 1.5;
+        margin: 4px 0;
+    }
+
+    .project-body p {
+        font-size: 7px;
+        line-height: 1.6;
+        min-height: 0;
+    }
+
+    .card-link {
+        font-size: 7px;
+        margin-top: 5px;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+
+    /* Features - سه‌تایی */
+
+    .feature-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .feature-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
+
+    .feature h3 {
+        font-size: 8px;
+        line-height: 1.5;
+    }
+
+    .feature p {
+        font-size: 7px;
+        line-height: 1.5;
+    }
+
+
+    /* About */
+
+    .about-text h2 {
+        font-size: 25px;
+    }
+
+
+    /* Contact */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Branch */
+
+    .branch-info {
+        padding: 40px 0;
+    }
+
+    .branch-card {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    .branch-heading h2 {
+        font-size: 19px;
+    }
+
+    .branch-heading p {
+        font-size: 9px;
+    }
+
+    .branch-image {
+        border-radius: 9px;
+    }
+
+
+    /* Footer */
+
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-message {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+    }
 }
