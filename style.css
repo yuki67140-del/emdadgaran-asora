@@ -417,8 +417,8 @@ a {
 
 .about-grid {
     display: grid;
-    grid-template-columns: .9fr 1.1fr;
-    gap: 55px;
+    grid-template-columns: .95fr 1.05fr;
+    gap: 25px;
     align-items: center;
 }
 
@@ -682,6 +682,7 @@ a {
         padding: 10px 12px;
     }
 
+
     /* Hero */
 
     .hero-banner {
@@ -701,6 +702,7 @@ a {
         object-position: 70% center;
     }
 
+
     /* Stats */
 
     .stats {
@@ -712,17 +714,21 @@ a {
         border-bottom: 1px solid rgba(255, 255, 255, .14);
     }
 
+
     /* Projects */
 
     .project-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
+
     /* About */
 
     .about-grid {
         grid-template-columns: 1fr;
+        gap: 10px;
     }
+
 
     /* Donate */
 
@@ -740,6 +746,7 @@ a {
     .container {
         width: calc(100% - 24px);
     }
+
 
     /* Hero */
 
@@ -828,7 +835,7 @@ a {
     }
 
 
-    /* Projects - سه کارت کنار هم */
+    /* Projects */
 
     .project-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -877,7 +884,7 @@ a {
     }
 
 
-    /* Features - سه‌تایی */
+    /* Features */
 
     .feature-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -904,8 +911,42 @@ a {
 
     /* About */
 
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+        align-items: start;
+    }
+
+    .about-image {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        border-radius: 14px;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .about-text {
+        margin-top: 8px;
+        padding-top: 0;
+    }
+
     .about-text h2 {
         font-size: 25px;
+        line-height: 1.5;
+        margin: 0 0 8px;
+    }
+
+    .about-text p {
+        font-size: 11px;
+        line-height: 1.8;
+        margin-bottom: 15px;
     }
 
 
